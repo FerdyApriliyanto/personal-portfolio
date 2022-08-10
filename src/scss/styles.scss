@@ -50,7 +50,7 @@ body {
             font-weight: 500;
             font-family: $light-font;
             opacity: 0.75;
-            transition: 0.3s;
+            transition: 0.2s;
 
             &.active {
                 color: white;
@@ -133,7 +133,7 @@ body {
             display: inline-block;
             vertical-align: middle;
             width: 3px;
-            height: 50px;
+            height: 60px;
             background-color: $alternative;
             animation: blink .5s step-end infinite;
         }
@@ -154,7 +154,7 @@ body {
             color: $text-primary;
             background-color: $button-color;
             border-radius: 0%;
-            transition: 0.3s;
+            transition: 0.2s;
             font-family: $light-font;
             border: none;
 
@@ -189,7 +189,7 @@ body {
         background-color: $secondary;
         color: $text-primary;
         min-height: 20rem;
-        transition: 0.3s;
+        transition: 0.2s;
 
         h3 {
             padding-bottom: 1.5rem;
@@ -201,7 +201,7 @@ body {
         }
 
         a {
-            transition: 0.3s;
+            transition: 0.2s;
             color: $alternative;
 
             &::selection {
@@ -233,7 +233,7 @@ body {
         }
 
         i {
-            transition: 0.3s;
+            transition: 0.2s;
             color: $alternative;
             font-size: 7rem;
         }
@@ -286,11 +286,11 @@ body {
 
     .exp-box {
         background-color: $secondary;
-        transition: 0.3s;
+        transition: 0.2s;
 
         h1 {
             font-family: $heavy-font;
-            transition: 0.3s;
+            transition: 0.2s;
         }
 
         p {
@@ -320,6 +320,7 @@ body {
 .portfolio {
     overflow-x: hidden;
     overflow-y: hidden;
+
     h1 {
         font-family: $heavy-font;
 
@@ -353,7 +354,7 @@ body {
         font-family: $heavy-font;
         font-size: 2rem;
         border: 1px solid $primary;
-        transition: 0.3s;
+        transition: 0.2s;
 
         &:hover {
             border: 1px solid $alternative;
@@ -377,7 +378,7 @@ body {
             padding: 1rem 3rem;
             font-family: $light-font;
             border: none;
-            transition: 0.3s;
+            transition: 0.2s;
 
             &:hover {
                 background-color: $text-primary;
@@ -412,7 +413,7 @@ body {
     .nav-link {
         font-family: $light-font;
         opacity: 0.75;
-        transition: 0.3s;
+        transition: 0.2s;
         cursor: pointer;
 
         &:hover {
@@ -434,12 +435,18 @@ body {
     i {
         color: $social-media-color;
         font-size: 2rem;
-        transition: 0.3s;
         cursor: pointer;
+        transition: 0.2s;
 
         &:hover {
             color: $alternative;
         }
+    }
+
+    i.heart-icon {
+        font-size: 1.3rem;
+        color: $alternative;
+        cursor: default;
     }
 
     .social-media-icons {
@@ -483,12 +490,20 @@ body {
         .hidden-cta {
             margin: auto;
         }
+
+        img {
+            max-width: 85%;
+            height: auto;
+            margin: auto;
+            display: flex;
+        }
     }
 
     .hero {
         overflow: hidden;
-        margin-top: 50px;
         margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
 
         .hero-text {
             span.name-text {
@@ -502,11 +517,20 @@ body {
             .btn-primary {
                 padding: 1rem 2rem;
             }
+
+            .hero-cursor {
+                width: 2px;
+                height: 52px;
+            }
+
         }
 
         .hero-image {
             img.image {
+                max-width: 90%;
+                height: auto;
                 margin: auto;
+                display: flex;
             }
         }
     }
@@ -517,22 +541,7 @@ body {
         width: 83%;
     }
 
-    .nav.nav-fer {
-        margin-bottom: 30px;
-
-        .nav-item {
-            .nav-link {
-                font-size: 1rem;
-            }
-        }
-    }
-
     .experience {
-        display: flex;
-        flex-direction: column;
-    }
-
-    footer.footer.footer-3 {
         display: flex;
         flex-direction: column;
     }
