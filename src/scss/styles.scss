@@ -1,0 +1,664 @@
+@import "../node_modules/bootstrap/scss/functions";
+
+$font-family-base: 'Poppins', sans-serif;
+$primary: #111111;
+$secondary: #1E1E1E;
+$third : #181818;
+$alternative: #C31A26;
+$text-primary: #FFFFFF;
+$button-color: #B61622;
+
+$enable-cssgrid: true;
+$social-media-color: #545454;
+
+$heavy-font: 'Kanit', sans-serif;
+$light-font: 'Lexend Exa', sans-serif;
+
+@import "../node_modules/bootstrap/scss/variables";
+
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/transitions";
+
+@import "../node_modules/bootstrap/scss/utilities";
+
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+@import "../node_modules/bootstrap/scss/helpers";
+
+body {
+    background-color: $primary;
+}
+
+// navbar
+.navbar-bg {
+    background-color: $primary;
+
+    .navbar-nav {
+        a.nav-link {
+            color: $text-primary;
+            align-self: center;
+            font-weight: 500;
+            font-family: $light-font;
+            opacity: 0.75;
+            transition: 0.3s;
+
+            &.active {
+                color: white;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &.nav-link-cta {
+                border-radius: 999px;
+                background-color: $primary;
+                color: white;
+                position: relative;
+                z-index: 2;
+                padding: 9px 52px;
+            }
+
+            &::selection {
+                background-color: $alternative;
+            }
+        }
+    }
+
+    .hidden-cta {
+        background-color: transparent;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+// end of navbar
+
+// hero
+.hero {
+    justify-content: center;
+    align-items: center;
+
+    .hero-text {
+        span.name-text {
+            font-weight: 700;
+            color: $red;
+            font-family: $heavy-font;
+
+            &::selection {
+                background-color: $alternative;
+                color: $text-primary;
+            }
+        }
+
+        h1 {
+            font-weight: 700;
+            color: $text-primary;
+
+            &::selection {
+                background-color: $alternative;
+            }
+        }
+
+        p {
+            line-height: 2rem;
+            color: $text-primary;
+            font-family: $light-font;
+
+            &::selection {
+                background-color: $alternative;
+            }
+        }
+
+        .hero-title {
+            display: inline-block;
+            vertical-align: middle;
+            color: $text-primary;
+            letter-spacing: 2px;
+            font-size: 4.5rem;
+            font-family: $heavy-font;
+        }
+
+        .hero-cursor {
+            display: inline-block;
+            vertical-align: middle;
+            width: 3px;
+            height: 50px;
+            background-color: $alternative;
+            animation: blink .5s step-end infinite;
+        }
+
+        @keyframes blink {
+
+            from,
+            to {
+                background-color: transparent
+            }
+
+            50% {
+                background-color: $alternative;
+            }
+        }
+
+        .btn-primary {
+            color: $text-primary;
+            background-color: $button-color;
+            border-radius: 0%;
+            transition: 0.3s;
+            font-family: $light-font;
+            border: none;
+
+            &:hover {
+                background-color: $text-primary;
+                color: $alternative;
+            }
+        }
+
+    }
+
+    .hero-image {
+        position: relative;
+        z-index: 1;
+
+        .image {
+            object-fit: contain;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+// end of hero
+
+// services
+.services {
+    width: 60%;
+
+    .card-style {
+        background-color: $secondary;
+        color: $text-primary;
+        min-height: 20rem;
+        transition: 0.3s;
+
+        h3 {
+            padding-bottom: 1.5rem;
+            font-family: $heavy-font;
+
+            &::selection {
+                background-color: $secondary;
+            }
+        }
+
+        a {
+            transition: 0.3s;
+            color: $alternative;
+
+            &::selection {
+                background-color: $secondary;
+            }
+        }
+
+        &:hover {
+            background-color: $alternative;
+            color: $text-primary;
+            border-top-left-radius: 20%;
+            border-bottom-right-radius: 20%;
+
+            a {
+                color: $text-primary;
+            }
+
+            i {
+                color: $text-primary;
+            }
+        }
+
+        p {
+            font-family: $light-font;
+
+            &::selection {
+                background-color: $secondary;
+            }
+        }
+
+        i {
+            transition: 0.3s;
+            color: $alternative;
+            font-size: 7rem;
+        }
+    }
+}
+
+// end of services
+
+// experience
+.experience {
+    h1.twelve {
+        color: $alternative;
+        font-size: 8rem;
+        font-family: $heavy-font;
+
+        &::selection {
+            background-color: $alternative;
+            color: $text-primary;
+        }
+    }
+
+    h6 {
+        color: $text-primary;
+        font-size: 3rem;
+        font-family: $heavy-font;
+
+        &::selection {
+            background-color: $alternative;
+        }
+    }
+
+    h1 {
+        color: $alternative;
+
+        &::selection {
+            background-color: $secondary;
+        }
+    }
+
+    p {
+        color: $text-primary;
+
+        &::selection {
+            background-color: $secondary;
+        }
+    }
+
+    .exp-box {
+        background-color: $secondary;
+        transition: 0.3s;
+
+        h1 {
+            font-family: $heavy-font;
+            transition: 0.3s;
+        }
+
+        p {
+            font-family: $light-font;
+        }
+
+        &:hover {
+            h1 {
+                color: $text-primary;
+            }
+
+            background-color: $alternative;
+        }
+    }
+}
+
+// services exp bg
+.services-exp-bg {
+    background: linear-gradient(to left, transparent 50%, $third 50%);
+}
+
+// end of services exp bg
+
+// end of experience
+
+// portfolio
+.portfolio {
+    h1 {
+        font-family: $heavy-font;
+
+        &::selection {
+            background-color: $alternative;
+        }
+    }
+
+    h2 {
+        font-family: $heavy-font;
+
+        &::selection {
+            background-color: $alternative;
+        }
+    }
+
+    img {
+        box-shadow: 10px 10px 5px #181818;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .port-box {
+        background-color: $secondary;
+    }
+
+    .btn {
+        color: $alternative;
+        background-color: transparent;
+        border-radius: 0%;
+        font-family: $heavy-font;
+        font-size: 2rem;
+        border: 1px solid $primary;
+        transition: 0.3s;
+
+        &:hover {
+            border: 1px solid $alternative;
+        }
+    }
+}
+
+// end of portfolio
+
+// contact 
+.contact {
+    background-color: $secondary;
+
+    .contact-btn {
+        margin: auto;
+
+        .btn-primary {
+            color: white;
+            background-color: $button-color;
+            border-radius: 0%;
+            padding: 1rem 3rem;
+            font-family: $light-font;
+            border: none;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: $text-primary;
+                color: $alternative;
+            }
+        }
+    }
+
+    h1 {
+        font-family: $heavy-font;
+
+        &::selection {
+            background-color: $alternative;
+        }
+    }
+
+    p {
+        font-family: $light-font;
+
+        &::selection {
+            background-color: $alternative;
+        }
+    }
+}
+
+// end of contact
+
+// lower navbar
+.lower-navbar {
+    padding-top: 5rem;
+
+    .nav-link {
+        font-family: $light-font;
+        opacity: 0.75;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &::selection {
+            background-color: $alternative;
+        }
+    }
+}
+
+// end of lower navbar
+
+// footer
+.footer {
+    background-color: $secondary;
+
+    i {
+        color: $social-media-color;
+        font-size: 2rem;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            color: $alternative;
+        }
+    }
+
+    .social-media-icons {
+        padding: 3rem;
+    }
+
+    p {
+        font-family: $light-font;
+
+        &::selection {
+            background-color: $alternative;
+        }
+    }
+}
+
+// end of footer
+
+// media queries
+@include media-breakpoint-down(lg) {
+    html {
+        font-size: 80%;
+    }
+
+    .navbar-bg {
+        padding: 1rem;
+
+        .navbar-nav {
+            a.nav-link {
+                font-size: 1rem;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+
+                &.nav-link-cta {
+                    margin: 1rem;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                }
+            }
+        }
+
+        .hidden-cta {
+            margin: auto;
+        }
+    }
+
+    .hero {
+        overflow: hidden;
+        margin-top: 50px;
+        margin-bottom: 30px;
+
+        .hero-text {
+            span.name-text {
+                font-size: 1.25rem;
+            }
+
+            h1 {
+                font-size: 1.25rem;
+            }
+
+            .btn-primary {
+                padding: 1rem 2rem;
+            }
+        }
+
+        .hero-image {
+            img.image {
+                margin: auto;
+            }
+        }
+    }
+
+    .services {
+        display: flex;
+        flex-direction: column;
+        width: 83%;
+    }
+
+    .nav.nav-fer {
+        margin-bottom: 30px;
+
+        .nav-item {
+            .nav-link {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .experience {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer.footer.footer-3 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    html {
+        font-size: 90%;
+    }
+
+    .navbar-bg {
+        padding: 1rem;
+
+        .navbar-nav {
+            a.nav-link {
+                font-size: 1rem;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+
+                &.nav-link-cta {
+                    margin: 1rem;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                }
+            }
+        }
+    }
+
+    .hero {
+        .hero-text {
+            span.name-text {
+                font-size: 1.5rem;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            .btn-primary {
+                padding: 1rem 2rem;
+                margin-bottom: 50px;
+            }
+        }
+
+        .hero-image {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .nav.nav-fer {
+        margin-bottom: 30px;
+
+        .nav-item {
+            .nav-link {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .services {
+        width: auto;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .navbar-bg {
+        padding: 1rem;
+
+        .navbar-nav {
+            a.nav-link {
+                font-size: 1rem;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+
+                &.nav-link-cta {
+                    margin: 1rem;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                }
+            }
+        }
+    }
+
+    .hero {
+        .hero-text {
+            span.name-text {
+                font-size: 1.5rem;
+            }
+
+            h1 {
+                font-size: 70px;
+            }
+
+            .btn-primary {
+                padding: 1rem 2rem;
+            }
+        }
+
+        .hero-image {
+            top: -20px;
+
+            span.bulb-primary {
+                width: 75px;
+                height: 75px;
+                top: 50%;
+                left: 40px;
+            }
+
+            span.bulb-compact {
+                top: 120px;
+                right: 80px;
+                width: 30px;
+                gap: 6px;
+            }
+        }
+    }
+
+    .nav.nav-fer {
+        margin-bottom: 30px;
+
+        .nav-item {
+            .nav-link {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .services {
+        width: 60%;
+    }
+}
+
+// end of media queries
