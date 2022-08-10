@@ -244,6 +244,9 @@ body {
 
 // experience
 .experience {
+    overflow-x: hidden;
+    overflow-y: hidden;
+
     h1.twelve {
         color: $alternative;
         font-size: 8rem;
@@ -315,6 +318,8 @@ body {
 
 // portfolio
 .portfolio {
+    overflow-x: hidden;
+    overflow-y: hidden;
     h1 {
         font-family: $heavy-font;
 
@@ -455,7 +460,7 @@ body {
 // media queries
 @include media-breakpoint-down(lg) {
     html {
-        font-size: 80%;
+        font-size: 55%;
     }
 
     .navbar-bg {
