@@ -11,9 +11,6 @@ $button-color: #B61622;
 $enable-cssgrid: true;
 $social-media-color: #545454;
 
-$heavy-font: 'Kanit', sans-serif;
-$light-font: 'Lexend Exa', sans-serif;
-
 @import "../node_modules/bootstrap/scss/variables";
 
 @import "../node_modules/bootstrap/scss/maps";
@@ -35,6 +32,11 @@ $light-font: 'Lexend Exa', sans-serif;
 
 @import "../node_modules/bootstrap/scss/helpers";
 
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Lexend+Exa:wght@100;300&display=swap');
+
+$heavy-font: 'Kanit', sans-serif;
+$light-font: 'Lexend Exa', sans-serif;
+
 body {
     background-color: $primary;
 }
@@ -47,26 +49,13 @@ body {
         a.nav-link {
             color: $text-primary;
             align-self: center;
-            font-weight: 500;
+            font-weight: 300;
             font-family: $light-font;
             opacity: 0.75;
             transition: 0.2s;
 
-            &.active {
-                color: white;
-            }
-
             &:hover {
                 opacity: 1;
-            }
-
-            &.nav-link-cta {
-                border-radius: 999px;
-                background-color: $primary;
-                color: white;
-                position: relative;
-                z-index: 2;
-                padding: 9px 52px;
             }
 
             &::selection {
@@ -91,9 +80,9 @@ body {
 
     .hero-text {
         span.name-text {
-            font-weight: 700;
-            color: $red;
+            color: $alternative;
             font-family: $heavy-font;
+            font-weight: 700;
 
             &::selection {
                 background-color: $alternative;
@@ -114,6 +103,7 @@ body {
             line-height: 2rem;
             color: $text-primary;
             font-family: $light-font;
+            font-weight: 100;
 
             &::selection {
                 background-color: $alternative;
@@ -156,6 +146,7 @@ body {
             border-radius: 0%;
             transition: 0.2s;
             font-family: $light-font;
+            font-weight: 300;
             border: none;
 
             &:hover {
@@ -226,6 +217,7 @@ body {
 
         p {
             font-family: $light-font;
+            font-weight: 100;
 
             &::selection {
                 background-color: $secondary;
@@ -278,6 +270,7 @@ body {
 
     p {
         color: $text-primary;
+        font-weight: 100;
 
         &::selection {
             background-color: $secondary;
@@ -377,6 +370,7 @@ body {
             border-radius: 0%;
             padding: 1rem 3rem;
             font-family: $light-font;
+            font-weight: 300;
             border: none;
             transition: 0.2s;
 
@@ -397,6 +391,7 @@ body {
 
     p {
         font-family: $light-font;
+        font-weight: 100;
 
         &::selection {
             background-color: $alternative;
