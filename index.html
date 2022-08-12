@@ -12,16 +12,16 @@
 
     <script src="https://kit.fontawesome.com/0a7fe58980.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script type="module" crossorigin src="assets/index.ae2f9bc1.js"></script>
-    <link rel="stylesheet" href="assets/index.38b8dd6b.css">
+  <script type="module" crossorigin src="assets/index.ae2f9bc1.js"></script>
+  <link rel="stylesheet" href="assets/index.a5c43134.css">
 </head>
 
 <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-bg">
         <div class="container">
-            <img class="d-none d-lg-block" src="assets/favicon.ddca9dcd.ddca9dcd.ddca9dcd.ico" alt="navbar-logo"
-                width="80" height="80">
+            <img class="d-none d-lg-block" src="assets/favicon.ddca9dcd.ddca9dcd.ddca9dcd.ico" alt="navbar-logo" width="80"
+                height="80">
             <button class="navbar-toggler hidden-cta" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -82,7 +82,6 @@
                     <h3 class="card-title fw-bold pt-4">UI Design</h3>
                     <p class="card-text">Build various types of websites, ranging from portfolios websites, esport team
                         profiles websites, e-commerce websites, company or startup profiles websites to personal blogs.
-                        Cmon!.
                     </p>
                 </div>
             </div>
@@ -93,7 +92,6 @@
                     <h3 class="card-title fw-bold pt-4">Product Design</h3>
                     <p class="card-text">Build various types of websites, ranging from portfolios websites, esport team
                         profiles websites, e-commerce websites, company or startup profiles websites to personal blogs.
-                        Cmon!.
                     </p>
                 </div>
             </div>
@@ -104,7 +102,6 @@
                     <h3 class="card-title fw-bold pt-4">Web Design</h3>
                     <p class="card-text">Build various types of websites, ranging from portfolios websites, esport team
                         profiles websites, e-commerce websites, company or startup profiles websites to personal blogs.
-                        Cmon!.
                     </p>
                 </div>
             </div>
@@ -168,8 +165,7 @@
 
                 <div data-aos="fade-right" class="g-col-lg-6 g-col-12 p-3 text-white">
                     <div class="g-col-6 port-box p-5 text-white">
-                        <img src="assets/cafe-themed-website.88409b15.88409b15.88409b15.png"
-                            alt="Cafe Themed Website Picture">
+                        <img src="assets/cafe-themed-website.88409b15.88409b15.88409b15.png" alt="Cafe Themed Website Picture">
                     </div>
                     <h2 class="pt-3 fw-bold">Cafe Themed Website</h2>
                 </div>
@@ -213,7 +209,7 @@
     <!-- footer -->
     <footer class="container-fluid py-3 mt-3 d-flex justify-content-center align-items-center footer">
         <div class="container d-flex justify-content-center">
-            <img src="assets/favicon.ddca9dcd.ddca9dcd.ddca9dcd.ico" width="60" height="50" alt="">
+            <img class="footer-img" src="assets/favicon.ddca9dcd.ddca9dcd.ddca9dcd.ico" width="70" height="60" alt="">
         </div>
 
         <div class="d-flex flex-row social-media-icons mx-auto">
@@ -242,38 +238,24 @@
 
 
     <script>
-        // List of sentences
         var _CONTENT = [
             "Web Designer",
             "Web Enthusiast",
             "UI/UX Designer"
         ];
 
-        // Current sentence being processed
         var _PART = 0;
-
-        // Character number of the current sentence being processed 
         var _PART_INDEX = 0;
-
-        // Holds the handle returned from setInterval
         var _INTERVAL_VAL;
-
-        // Element that holds the text
         var _ELEMENT = document.querySelector(".hero-title");
-
-        // Cursor element 
         var _CURSOR = document.querySelector(".hero-cursor");
 
-        // Implements typing effect
         function Type() {
-            // Get substring with 1 characater added
             var text = _CONTENT[_PART].substring(0, _PART_INDEX + 1);
             _ELEMENT.innerHTML = text;
             _PART_INDEX++;
 
-            // If full sentence has been displayed then start to delete the sentence after some time
             if (text === _CONTENT[_PART]) {
-                // Hide the cursor
                 _CURSOR.style.display = 'inline-block';
 
                 clearInterval(_INTERVAL_VAL);
@@ -283,18 +265,14 @@
             }
         }
 
-        // Implements deleting effect
         function Delete() {
-            // Get substring with 1 characater deleted
             var text = _CONTENT[_PART].substring(0, _PART_INDEX - 1);
             _ELEMENT.innerHTML = text;
             _PART_INDEX--;
 
-            // If sentence has been deleted then start to display the next sentence
             if (text === '') {
                 clearInterval(_INTERVAL_VAL);
 
-                // If current sentence was last then display the first one, else move to the next
                 if (_PART == (_CONTENT.length - 1))
                     _PART = 0;
                 else
@@ -302,7 +280,6 @@
 
                 _PART_INDEX = 0;
 
-                // Start to display the next sentence after some time
                 setTimeout(function () {
                     _CURSOR.style.display = 'inline-block';
                     _INTERVAL_VAL = setInterval(Type, 100);
@@ -310,14 +287,13 @@
             }
         }
 
-        // Start the typing effect on load
         _INTERVAL_VAL = setInterval(Type, 100);
     </script>
     <script>
         AOS.init();
     </script>
 
-
+    
 </body>
 
 </html>
