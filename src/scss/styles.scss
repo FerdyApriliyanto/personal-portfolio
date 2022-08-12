@@ -174,13 +174,15 @@ body {
 
 // services
 .services {
-    width: 60%;
-
     .card-style {
         background-color: $secondary;
         color: $text-primary;
         min-height: 20rem;
         transition: 0.2s;
+
+        .card-body {
+            padding: 1.5rem 1rem;
+        }
 
         h3 {
             padding-bottom: 1.5rem;
@@ -593,26 +595,13 @@ body {
             flex-direction: column;
         }
     }
-
-    .nav.nav-fer {
-        margin-bottom: 30px;
-
-        .nav-item {
-            .nav-link {
-                font-size: 1rem;
-            }
-        }
-    }
-
-    .services {
-        width: auto;
-    }
 }
 
 @include media-breakpoint-up(xl) {
     html {
         font-size: 97%;
     }
+
     .navbar-bg {
         padding: 1rem;
 
@@ -663,20 +652,6 @@ body {
                 gap: 6px;
             }
         }
-    }
-
-    .nav.nav-fer {
-        margin-bottom: 30px;
-
-        .nav-item {
-            .nav-link {
-                font-size: 1rem;
-            }
-        }
-    }
-
-    .services {
-        width: 60%;
     }
 }
 
