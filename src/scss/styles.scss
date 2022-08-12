@@ -487,7 +487,7 @@ body {
         }
 
         img {
-            max-width: 85%;
+            max-width: 65%;
             height: auto;
             margin: auto;
             display: flex;
@@ -522,7 +522,7 @@ body {
 
         .hero-image {
             img.image {
-                max-width: 90%;
+                max-width: 80%;
                 height: auto;
                 margin: auto;
                 display: flex;
@@ -539,6 +539,13 @@ body {
     .experience {
         display: flex;
         flex-direction: column;
+    }
+
+    .footer {
+        .footer-img {
+            width: 4rem;
+            height: auto;
+        }
     }
 }
 
@@ -603,6 +610,9 @@ body {
 }
 
 @include media-breakpoint-up(xl) {
+    html {
+        font-size: 100%;
+    }
     .navbar-bg {
         padding: 1rem;
 
