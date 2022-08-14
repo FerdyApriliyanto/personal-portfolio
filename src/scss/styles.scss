@@ -223,8 +223,6 @@ body {
 
 // experience
 .experience {
-    overflow: hidden;
-
     h1.twelve {
         color: $alternative;
         font-size: 8rem;
@@ -521,9 +519,14 @@ body {
     }
 
     .experience {
+        overflow: hidden;
         display: flex;
         flex-direction: column;
         font-size: 120%;
+    }
+
+    .portfolio {
+        overflow: hidden;
     }
 
     .contact {
